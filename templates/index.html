@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">predict 'Price' based on other dependent variable.</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="CRIM" id="CRIM" placeholder="CRIM" step="any">
+            <input type="number" name="ZN" id="ZN" placeholder="ZN" step="any">
+            <input type="number" name="CHAS" id="CHAS" placeholder="CHAS" step="any">
+            <input type="number" name="NOX" id="NOX" placeholder="NOX" step="any">
+            <input type="number" name="RM" id="RM" placeholder="RM" step="any">
+            <input type="number" name="DIS" id="DIS" placeholder="DIS" step="any">
+            <input type="number" name="PTRATIO" id="PTRATIO" placeholder="PTRATIO" step="any">
+            <input type="number" name="B" id="B" placeholder="B" step="any">
+            <input type="number" name="LSTAT" id="LSTAT" placeholder="LSTAT" step="any">
+            <input type="submit" value="Predict">
+
+        </form>
+    </div>
+</div>
+{% endblock %}
